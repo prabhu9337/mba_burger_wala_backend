@@ -22,7 +22,7 @@ export const logout = (req, res, next) => {
             sameSite: process.env.NODE_ENV === "development" ? false : "none",
         })
         res.status(200).json({
-            message: "Logout"
+            message: "Logout Successfully"
         })
     })
 }

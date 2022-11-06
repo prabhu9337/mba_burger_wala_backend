@@ -6,7 +6,7 @@ const router = express.Router()
 
 router.post("/createorder", isAuthenticated, placeOrder)
 
-router.post("/createorderonline", isAuthenticated, placeOrderOnline)
+router.post("/createorderonline", placeOrderOnline)
 router.post("/paymentverification", isAuthenticated, paymentVerification)
 
 router.get("/myorders", isAuthenticated, getMyOrders)

@@ -94,7 +94,7 @@ export const getMyOrders = asyncError(async (req, res, next) => {
         user: req.user._id
     }).populate("user", "name")
 
-    console.log(req.user._id)
+    // console.log(req.user._id)
 
     res.status(200).json({
         success: true,
@@ -119,11 +119,11 @@ export const getOrderDetails = asyncError(async (req, res, next) => {
 // admin routes
 // get admin orders
 export const getAdminOrders = asyncError(async (req, res, next) => {
-    const order = await Order.find({}).populate("user", "name")
+    const orders = await Order.find({}).populate("user", "name")
 
     res.status().json({
         success: true,
-        order
+        orders
     })
 })
 
